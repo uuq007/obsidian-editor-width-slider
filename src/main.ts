@@ -200,7 +200,7 @@ export default class EditorWidthSlider extends Plugin {
 	updateEditorStyleYAML() {
 		// if there is yaml frontmatter, take info from yaml, otherwise take info from slider
 		const file = this.app.workspace.getActiveFile() as TFile; // Currently Open Note
-		if(file.name) {
+		if(file && file.name) {
 			const metadata = app.metadataCache.getFileCache(file);
 			// const metadata = app.vault.metadataCache.getFileCache(file);
 			if (metadata) {
